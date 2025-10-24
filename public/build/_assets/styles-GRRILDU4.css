@@ -1,0 +1,279 @@
+/* app/styles.css */
+body {
+  font-family:
+    Segoe UI,
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px #0000001a;
+  background: white;
+}
+.flyer {
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+  background: #fff;
+}
+h1 {
+  color: #e74c3c;
+  font-size: 2.5em;
+  margin-bottom: 5px;
+}
+h2 {
+  color: #3498db;
+  font-size: 1.5em;
+  margin-top: 5px;
+}
+.photo-placeholder {
+  width: 300px;
+  height: 300px;
+  margin: 20px auto;
+  border: 3px dashed #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f0;
+  font-size: 1.2em;
+  color: #888;
+  border-radius: 10px;
+}
+.photo-placeholder img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.info {
+  text-align: left;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f8f9fa;
+  border-left: 5px solid #e74c3c;
+  border-radius: 8px;
+  line-height: 1.6;
+}
+.contact {
+  background: #e3f2fd;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  font-weight: 700;
+}
+.contact a {
+  color: #d32f2f;
+  text-decoration: none;
+  font-weight: 700;
+}
+.contact a:hover {
+  text-decoration: underline;
+}
+.share {
+  background: #fff3cd;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+.footer {
+  font-size: .9em;
+  color: #777;
+  margin-top: 30px;
+  font-style: italic;
+}
+@media (max-width: 600px) {
+  .flyer {
+    padding: 15px;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  .photo-placeholder {
+    width: 250px;
+    height: 250px;
+  }
+}
+.download-section {
+  text-align: center;
+  margin: 30px 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border: 2px dashed #3498db;
+}
+.download-btn {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1em;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all .3s ease;
+  box-shadow: 0 4px 15px #3498db4d;
+}
+.download-btn:hover {
+  background: linear-gradient(135deg, #2980b9, #1f5f8b);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px #3498db66;
+}
+.download-btn:active {
+  transform: translateY(0);
+}
+.download-info {
+  margin-top: 10px;
+  color: #666;
+  font-size: .9em;
+  font-style: italic;
+}
+.flyer-print {
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  width: 794px;
+  height: 1123px;
+  margin: 0 auto;
+  font-family:
+    Segoe UI,
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.flyer-print h1 {
+  color: #e74c3c;
+  font-size: 2.2em;
+  margin-bottom: 5px;
+  line-height: 1.2;
+}
+.flyer-print h2 {
+  color: #3498db;
+  font-size: 1.4em;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+.photo-placeholder-print {
+  width: 200px;
+  height: 200px;
+  margin: 15px auto;
+  border: 2px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f0;
+  border-radius: 8px;
+}
+.photo-placeholder-print img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.info-print {
+  text-align: left;
+  margin: 15px auto;
+  padding: 15px;
+  background: #f8f9fa;
+  border-left: 4px solid #e74c3c;
+  border-radius: 6px;
+  line-height: 1.5;
+  font-size: .9em;
+}
+.contact-print {
+  background: #e3f2fd;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: .9em;
+}
+.contact-print a {
+  color: #d32f2f;
+  text-decoration: none;
+  font-weight: 700;
+}
+.share-print {
+  background: #fff3cd;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: .9em;
+}
+.footer-print {
+  font-size: .8em;
+  color: #777;
+  margin-top: 20px;
+  font-style: italic;
+}
+.print-section {
+  text-align: center;
+  margin: 20px 0;
+  padding: 15px;
+  background: #f0f8ff;
+  border-radius: 8px;
+  border: 2px dashed #2980b9;
+}
+.print-btn {
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1em;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all .3s ease;
+  box-shadow: 0 3px 10px #2ecc714d;
+}
+.print-btn:hover {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px #2ecc7166;
+}
+.print-btn:active {
+  transform: translateY(0);
+}
+.print-info {
+  margin-top: 8px;
+  color: #555;
+  font-size: .85em;
+  font-style: italic;
+}
+@media print {
+  body {
+    background: white !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .download-section,
+  .print-section {
+    display: none !important;
+  }
+  .flyer {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 10px !important;
+  }
+  .photo-placeholder img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  h1,
+  h2,
+  .contact a,
+  .info,
+  .share {
+    color: #000 !important;
+  }
+}

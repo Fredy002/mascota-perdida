@@ -5,6 +5,11 @@
 [build.environment]
   NODE_VERSION = "18"
 
+# Remix requires server-side rendering, so we need to use Netlify Functions
+[[plugins]]
+  package = "@netlify/plugin-remix"
+
+# Fallback for client-side routing
 [[redirects]]
   from = "/*"
   to = "/index.html"

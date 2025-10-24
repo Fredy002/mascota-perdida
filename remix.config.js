@@ -8,6 +8,8 @@ export default {
     v3_singleFetch: true,
     v3_throwAbortReason: true,
   },
+  // For GitHub Pages static deployment
+  ssr: false,
   // appDirectory: "app",
   // assetsBuildDirectory: "public/build",
   // publicPath: "/build/",

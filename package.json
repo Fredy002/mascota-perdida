@@ -7,7 +7,9 @@
     "build": "remix build",
     "dev": "remix dev",
     "start": "remix-serve ./build/index.js",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "clean": "rimraf build .cache",
+    "prebuild": "npm run clean"
   },
   "dependencies": {
     "@remix-run/node": "^2.5.1",
@@ -23,6 +25,7 @@
     "@remix-run/dev": "^2.5.1",
     "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.18",
+    "rimraf": "^5.0.10",
     "typescript": "^5.3.3",
     "vite": "^5.0.10"
   },

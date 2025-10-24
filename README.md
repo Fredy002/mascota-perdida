@@ -1,68 +1,125 @@
-# ¡Se perdió Isabela! - Proyecto Remix
+# 🐶 Volante de Búsqueda de Isabela
 
-Una página web para ayudar a encontrar a la perrita perdida Isabela, construida con Remix.
+Una aplicación web moderna para crear y personalizar volantes de búsqueda de mascotas perdidas, construida con Remix.
 
-## 🚀 Cómo ejecutar el proyecto
+## ✨ Características
 
-### 1. Instalar dependencias
+- 🎨 **Edición inline** - Edita directamente sobre el diseño del volante
+- 📄 **Generación de PDF** - Descarga volantes en formato A4 para imprimir
+- 🖨️ **Impresión directa** - Imprime desde el navegador
+- 💾 **Guardado local** - Guarda tus datos en el navegador
+- 📱 **Responsive** - Funciona en móviles y escritorio
+- 🎯 **Fácil de usar** - Interfaz intuitiva y simple
+
+## 🚀 Instalación y Uso
+
+### Desarrollo
 ```bash
+# Instalar dependencias
 npm install
-```
 
-### 2. Ejecutar en modo desarrollo
-```bash
+# Ejecutar en modo desarrollo
 npm run dev
+
+# Abrir en navegador
+# http://localhost:3000
 ```
 
-### 3. Abrir en el navegador
-Ve a [http://localhost:5173](http://localhost:5173)
+### Producción
+```bash
+# Construir para producción
+npm run build
 
-## 📁 Estructura del proyecto
+# Ejecutar en producción
+npm start
+```
+
+## 📋 Funcionalidades
+
+### ✏️ Edición de Contenido
+- Título y subtítulo del volante
+- Información de la mascota (nombre, raza, características)
+- Ubicación y fecha de desaparición
+- Datos de contacto (teléfono, WhatsApp, email)
+- Mensajes personalizados
+
+### 💾 Gestión de Datos
+- **Guardar** - Guarda los datos en el navegador
+- **Cargar** - Carga datos previamente guardados
+- **Restaurar** - Vuelve a los datos originales
+
+### 📄 Generación de PDF
+- PDF optimizado en formato A4
+- Solo el contenido del volante (sin botones)
+- Alta calidad de imagen
+- Listo para imprimir
+
+## 🛠️ Tecnologías
+
+- **Remix** - Framework web moderno
+- **React** - Biblioteca de interfaz de usuario
+- **TypeScript** - Tipado estático
+- **Vite** - Herramienta de build
+- **html2canvas** - Generación de imágenes
+- **jsPDF** - Generación de PDF
+
+## 📁 Estructura del Proyecto
 
 ```
 ├── app/
 │   ├── routes/
-│   │   └── _index.tsx      # Página principal
+│   │   ├── _index.tsx      # Redirección a /main
+│   │   └── main.tsx        # Página principal
+│   ├── components/
+│   │   ├── DownloadPDF.tsx # Generación de PDF
+│   │   └── PrintButton.tsx # Botón de impresión
 │   ├── root.tsx            # Layout principal
 │   └── styles.css          # Estilos CSS
 ├── public/
-│   └── isabela.jpg         # Imagen de Isabela
-├── package.json
-├── remix.config.js
-└── vite.config.ts
+│   ├── isabela.jpg         # Imagen de Isabela
+│   └── favicon.svg         # Favicon personalizado
+└── package.json            # Dependencias y scripts
 ```
 
-## 🛠️ Scripts disponibles
+## 🚀 Despliegue
 
-- `npm run dev` - Ejecuta el servidor de desarrollo
-- `npm run build` - Construye la aplicación para producción
-- `npm start` - Ejecuta la aplicación en producción
-- `npm run typecheck` - Verifica los tipos de TypeScript
+### Vercel (Recomendado)
+```bash
+npm i -g vercel
+vercel
+```
 
-## 📱 Características
+### Netlify
+```bash
+npm i -g netlify-cli
+netlify deploy --prod
+```
 
-- ✅ Diseño responsivo
-- ✅ Optimizado para móviles
-- ✅ Imagen de Isabela incluida
-- ✅ Enlaces de contacto funcionales
-- ✅ Estructura moderna con Remix
-- ✅ **Botón para descargar PDF en formato A4**
-- ✅ **Botón para imprimir directamente**
-- ✅ Optimizado para impresión
+## 📝 Uso
 
-## 🖨️ Funcionalidades de Impresión
+1. **Abrir la aplicación** en tu navegador
+2. **Hacer clic en "Editar Contenido"** para activar el modo de edición
+3. **Modificar los campos** que necesites (aparecen con bordes punteados)
+4. **Guardar los cambios** usando el botón "Guardar"
+5. **Ver la vista previa** para revisar el resultado
+6. **Descargar el PDF** para imprimir y distribuir
 
-### Descargar PDF
-- Haz clic en "📄 Descargar PDF para Imprimir"
-- Se genera un PDF optimizado en formato A4
-- Perfecto para imprimir y distribuir
+## 🎯 Características Técnicas
 
-### Imprimir directamente
-- Haz clic en "🖨️ Imprimir Página"
-- Se abre el diálogo de impresión del navegador
-- Usa Ctrl+P como alternativa rápida
+- **Persistencia local** - Los datos se guardan en localStorage
+- **Optimización de imágenes** - Generación de PDF de alta calidad
+- **Responsive design** - Adaptable a diferentes dispositivos
+- **Carga rápida** - Optimizado para rendimiento
+- **Sin dependencias externas** - Funciona completamente en el navegador
 
-### Optimizaciones para impresión
-- Los botones se ocultan automáticamente al imprimir
-- Colores optimizados para impresión en blanco y negro
-- Layout adaptado para papel A4
+## 📞 Soporte
+
+Si tienes algún problema o sugerencia, por favor abre un issue en el repositorio.
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT.
+
+---
+
+**¡Ayuda a encontrar a Isabela y otras mascotas perdidas!** 🐶❤️

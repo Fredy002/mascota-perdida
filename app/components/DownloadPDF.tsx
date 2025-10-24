@@ -1,4 +1,24 @@
-export default function DownloadPDF() {
+interface FlyerData {
+  title: string;
+  subtitle: string;
+  name: string;
+  breed: string;
+  characteristics: string;
+  lastSeen: string;
+  date: string;
+  phone: string;
+  whatsapp: string;
+  email: string;
+  reward: string;
+  shareMessage: string;
+  footer: string;
+}
+
+interface DownloadPDFProps {
+  flyerData: FlyerData;
+}
+
+export default function DownloadPDF({ flyerData }: DownloadPDFProps) {
   const downloadPDF = async () => {
     try {
       // Importar las librerías dinámicamente
@@ -13,20 +33,42 @@ export default function DownloadPDF() {
         return;
       }
 
-      // Crear un clon del elemento flyer sin los botones
-      const tempElement = flyerElement.cloneNode(true) as HTMLElement;
-      
-      // Remover los botones del clon
-      const downloadSection = tempElement.querySelector('.download-section');
-      const printSection = tempElement.querySelector('.print-section');
-      
-      if (downloadSection) downloadSection.remove();
-      if (printSection) printSection.remove();
-
-      // Asegurar que solo capture el contenido del volante
-      tempElement.style.margin = "0";
-      tempElement.style.padding = "20px";
-      tempElement.style.boxSizing = "border-box";
+      // Crear un elemento temporal con el contenido editado
+      const tempElement = document.createElement('div');
+      tempElement.className = 'flyer-print';
+      tempElement.innerHTML = `
+        <h1>${flyerData.title}</h1>
+        <h2>${flyerData.subtitle}</h2>
+        
+        <div class="photo-placeholder-print">
+          <img src="/isabela.jpg" alt="${flyerData.name}" />
+        </div>
+        
+        <div class="info-print">
+          <strong>📌 Nombre:</strong> ${flyerData.name}<br />
+          <strong>🐶 Raza:</strong> ${flyerData.breed}<br />
+          <strong>👀 Características:</strong> ${flyerData.characteristics}<br />
+          <strong>📍 Última vez vista:</strong> ${flyerData.lastSeen}<br />
+          <strong>📅 Fecha de desaparición:</strong> ${flyerData.date}
+        </div>
+        
+        <div class="contact-print">
+          <strong>📞 ¡LLÁMAME SI LA VES O SABES ALGO!</strong><br />
+          Teléfono: <a href="tel:${flyerData.phone}">${flyerData.phone}</a><br />
+          WhatsApp: <a href="${flyerData.whatsapp}">Haz clic aquí</a><br />
+          Correo: <a href="mailto:${flyerData.email}">${flyerData.email}</a><br />
+          <br />
+          💰 <strong>${flyerData.reward}</strong>
+        </div>
+        
+        <div class="share-print">
+          📢 <strong>${flyerData.shareMessage}</strong>
+        </div>
+        
+        <div class="footer-print">
+          ${flyerData.footer}
+        </div>
+      `;
 
       // Configurar el elemento temporal
       tempElement.style.position = "absolute";

@@ -4,22 +4,34 @@ node_modules/
 # Production build
 /build
 
+# Cache directories
+.cache/
+.parcel-cache/
+
 # Environment variables
 .env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # IDE
 .vscode/
 .idea/
+*.swp
+*.swo
 
 # OS
 .DS_Store
 Thumbs.db
+Desktop.ini
 
 # Logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+lerna-debug.log*
 
 # Runtime data
 pids
@@ -29,13 +41,7 @@ pids
 
 # Coverage directory used by tools like istanbul
 coverage/
-
-# nyc test coverage
 .nyc_output
-
-# Dependency directories
-node_modules/
-jspm_packages/
 
 # Optional npm cache directory
 .npm
@@ -52,24 +58,20 @@ jspm_packages/
 # dotenv environment variables file
 .env
 
-# parcel-bundler cache (https://parceljs.org/)
-.cache
-.parcel-cache
+# Remix
+/build/
+/public/build/
 
-# next.js build output
-.next
+# Vercel
+.vercel
 
-# nuxt.js build output
-.nuxt
+# Netlify
+.netlify
 
-# vuepress build output
-.vuepress/dist
+# Temporary files
+*.tmp
+*.temp
 
-# Serverless directories
-.serverless
-
-# FuseBox cache
-.fusebox/
-
-# DynamoDB Local files
-.dynamodb/
+# Lock files (keep package-lock.json)
+yarn.lock
+pnpm-lock.yaml

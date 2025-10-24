@@ -8,7 +8,7 @@ export default {
     v3_singleFetch: true,
     v3_throwAbortReason: true,
   },
-  // For GitHub Pages static deployment
+  // For static deployment (Netlify and GitHub Pages)
   ssr: false,
   // appDirectory: "app",
   // assetsBuildDirectory: "public/build",
